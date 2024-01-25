@@ -1,0 +1,223 @@
+/* configurações globais */
+:root {
+    --color-dark1: #2a2c2f;
+    --color-dark2: #323437;
+    --color-white: #fff;
+    --color-dark3: #dce4f5;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+    --color-purple: #b040ff;
+    --color-darkblue: #1b0247;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    align-content: center;
+}
+
+body {
+    position: relative;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+
+    background: var(--color-white);
+
+    color: var(--color-white);
+
+    padding: 10px;
+
+    display: flex;
+
+    text-align: center;
+
+    transition: 1s;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 1230px;
+    height: 100%;
+
+    box-sizing: none;
+
+    grid-template-columns: 1fr 2fr;
+}
+
+header {
+    color: var(--color-white);
+    position: relative;
+
+    width: 300px;
+
+    height: 100%;
+    min-height: 100%;
+
+    background: var(--color-dark5);
+
+    padding: 10px;
+    display: block;
+
+    text-align: center;
+}
+
+section .social {
+    color: var(--color-white);
+    position: sticky;
+    margin: 0;
+
+    padding: 10px;
+    font-size: 12px;
+
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header section .title-social {
+    color: var(--color-dark3);
+    font-size: 24px;
+
+    text-align: right;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+header section .simple {
+    color: var(--color-dark3);
+    margin: 08px;
+    text-align: left;
+    font-size: 12.5px;
+}
+
+header section .na-linha {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+figure img.face {
+    align-items: center;
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+img.r-social {
+    width: 25px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-inline-end: 10px;
+}
+
+header footer {
+    background-color: var(--color-dark5);
+    color: var(--color-white);
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+section.conteudo {
+    color: var(--color-darkblue);
+    position: relative;
+    width: 750px;
+    min-width: 750px;
+    height: 100%;
+    background: var(--color-white);
+    padding: 10px;
+    display: block;
+}
+
+section.conteudo .about,
+section.conteudo .stud,
+section.conteudo .work {
+    background: var(--color-dark3);
+    padding: 3px;
+    box-shadow: 5px 5px 5px var(--color-dark4);
+    margin: 20px;
+    text-align: right;
+}
+
+section.conteudo p {
+    margin: 20px;
+    text-indent: 40px;
+    font-size: 16px;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: none;
+}
+
+section.conteudo .subTitle {
+    font-size: 15px;
+    margin: 20px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+section.conteudo img.imag-pictures {
+    font-size: 15px;
+    width: 70px;
+    margin: 10px;
+    text-align: right;
+}
+
+section.conteudo .title {
+    margin: 2px;
+    font-size: 18px;
+    white-space: nowrap;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 8px 0px;
+    margin: 2px 2px;
+}
+
+input[type='email'] {
+    height: 10px;
+}
+
+input[type='text'] {
+    height: 150px;
+}
+
+button {
+    background-color: var(--color-dark3);
+    color: var(--color-dark5);
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+}
+
+.progress-bar {
+    --progresso: 0;
+    margin: 10px;
+    height: 5px;
+    width: 150px;
+    padding: 3px;
+    background-color: var(--color-dark4);
+    display: flex;
+}
+
+.progress-bar::before {
+    content: '';
+    width: calc(var(--progresso) * 1%);
+    background-color: var(--color-white);
+    animation: progress-animation 5s;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: --progresso;
+    }
+}
